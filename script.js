@@ -3,7 +3,17 @@ const container = document.querySelector('.container');
 
 const slider = document.querySelector('.slider');
 const sliderValue = document.querySelector('.slider-value');
-const clearButton = document.querySelector('.clear');  
+const clearButton = document.querySelector('.clear'); 
+const colorSelect = document.querySelector('#color-select');
+
+colorSelect.style.color = 'white';
+colorSelect.style.background = colorSelect.value === 'random' ? 'transparent' : colorSelect.value;
+colorSelect.addEventListener('change', function() {
+    colorSelect.style.color = colorSelect.value === 'random' ? 'black' : colorSelect.value === 'yellow' ? 'black' : 'white';
+    colorSelect.style.background = colorSelect.value === 'random' ? 'linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)' : colorSelect.value;
+});
+
+
 let isMouseDown = false;
 
 

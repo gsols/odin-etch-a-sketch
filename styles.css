@@ -1,17 +1,27 @@
+.body  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+
+
 .title{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 20px;
+    margin-bottom: 100px;
 }
 
 .container{
     display: flex;
-    border: 1px solid black;
+    border: 3px solid rgb(112, 112, 112);
     width: 500px;
     height: 500px;
     margin: auto;
     flex-wrap: wrap;
     flex-direction: column;
+    border-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet) 1;
 }
 
 .cell{
