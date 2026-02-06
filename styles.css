@@ -32,6 +32,7 @@
 
 .slider-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 200px; 
     text-align: center; 
@@ -42,7 +43,6 @@
 }
 
 .slider-value {
-    margin-left: 10px; 
     font-size: 16px; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #177955;
@@ -61,7 +61,7 @@
 
 .slider {
   -webkit-appearance: none; /* Removes default webkit styles */
-  width: 100%; /* Full-width */
+  width: 80%; /* Full-width */
   height: 15px; /* Specified height */
   border-radius: 5px; /* Rounded corners for the track */
   background: #d3d3d3; /* Grey background */
