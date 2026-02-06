@@ -15,13 +15,9 @@
 }
 
 .cell{
-    border: 1px solid black;
     flex: 1
 }
 
-.cell:{
-    background-color: black;
-}
 .row{
     display: flex;
     flex: 1;

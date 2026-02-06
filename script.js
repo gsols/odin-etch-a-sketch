@@ -47,6 +47,8 @@ function createGrid(size) {
                 color = `hsl(${Math.random() * 360}, 100%, 50%)`;
             }
             cell.style.backgroundColor = `${color}`;
+            let currentOpacity = parseFloat(cell.style.opacity) || 0;
+            cell.style.opacity = `${currentOpacity + 0.1}`;
         }
     });
 });
