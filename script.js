@@ -3,11 +3,28 @@ const container = document.querySelector('.container');
 
 const slider = document.querySelector('.slider');
 const sliderValue = document.querySelector('.slider-value');
+const clearButton = document.querySelector('.clear');  
+let isMouseDown = false;
+
+
+document.addEventListener('mouseup', function() {
+    isMouseDown = false;
+});
+
+document.addEventListener('mousedown', function() {
+    isMouseDown = true;
+});
+
+clearButton.addEventListener('click', function() {
+    clearGrid();
+    createGrid(slider.value);
+});
+createGrid(slider.value);
 
 slider.addEventListener('input', function() {
     clearGrid();
     sliderValue.textContent = slider.value;
-    createGrid(sliderValue.textContent);
+    createGrid(slider.value);
 });
 
 function createGrid(size) {
@@ -21,6 +38,21 @@ function createGrid(size) {
         }
         container.appendChild(row);
     }
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach(cell => {
+    cell.addEventListener('mouseover', function() {
+        if (isMouseDown) {
+            let color = document.querySelector('#color-select').value;
+            if (color === 'random') {
+                color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            }
+            cell.style.backgroundColor = `${color}`;
+        }
+    });
+});
+
+
+
 }
 
 function clearGrid() {
@@ -28,5 +60,4 @@ function clearGrid() {
         container.removeChild(container.firstChild);
     }
 }
-
 

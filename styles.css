@@ -19,6 +19,9 @@
     flex: 1
 }
 
+.cell:{
+    background-color: black;
+}
 .row{
     display: flex;
     flex: 1;
@@ -30,6 +33,16 @@
     margin: 20px 0;
 }
 
+#color-select{
+    padding: 8px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #177955;
+    background-color: #dff3ec;
+    border: #10a36d 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .slider-container {
     display: flex;
     justify-content: space-between;
